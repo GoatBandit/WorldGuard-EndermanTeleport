@@ -15,7 +15,7 @@ jobs:
       - name: Set build variables
         run: |
             echo "PROJECT_NAME=WorldGuard-EndermanTeleport" >> $GITHUB_ENV
-            echo "OUTPUT_NAME=$PROJECT_NAME_$BUILD_NUMBER" >> $GITHUB_ENV
+            echo "OUTPUT_NAME=${PROJECT_NAME}_${BUILD_NUMBER}" >> $GITHUB_ENV
 
       - name: Set up JDK 1.8
         uses: actions/setup-java@v1
