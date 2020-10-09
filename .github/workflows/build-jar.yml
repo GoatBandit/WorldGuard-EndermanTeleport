@@ -23,7 +23,7 @@ jobs:
         run: mvn clean package
 
       - name: Rename output .jar
-        run:  for f in *.jar; do mv "${f}" "${f%.*}_${GITHUB_RUN_NUMBER}.${f##*.}"; done
+        run:  for f in target/*.jar; do mv "${f}" "${f%.*}_${GITHUB_RUN_NUMBER}.${f##*.}"; done
 
       - name: Upload GitHub artifact
         uses: actions/upload-artifact@v2
