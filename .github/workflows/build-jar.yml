@@ -23,14 +23,10 @@ jobs:
         run: mvn clean package
 
       - name: Rename output .jar
-        run: |
-            NAME=$(mvn -q -Dexec.executable="echo" -Dexec.args='${project.build.finalName}' exec:exec)
-            JAR=${NAME}_${GITHUB_RUN_NUMBER}
-            mv target/$NAME.jar $JAR.jar
-            echo JAR=$JAR >> $GITHUB_ENV
+        run:  for f in *.jar; do mv "${f}" "${f%.*}_${GITHUB_RUN_NUMBER}.${f##*.}"; done
 
       - name: Upload GitHub artifact
         uses: actions/upload-artifact@v2
         with:
           name: build
-          path: ${{ env.JAR }}.jar
+          path: target/*.jar
