@@ -29,7 +29,9 @@ jobs:
           token: ${{secrets.github_token}}
 
       - name: Set project name
-        run: echo "PROJECT_NAME=$( mvn help:evaluate -Dexpression=project.name )" >> $GITHUB_ENV
+        run: |
+            NAME=$( mvn help:evaluate -Dexpression=project.name -q -DforceStdout )
+            echo "PROJECT_NAME=${NAME}" >> $GITHUB_ENV
       - name: Set output name
         run: echo "OUTPUT_NAME=${PROJECT_NAME}_${BUILD_NUMBER}" >> $GITHUB_ENV
 
