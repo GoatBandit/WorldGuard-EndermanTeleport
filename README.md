@@ -19,7 +19,7 @@
 
 [![WorldGuard](https://img.shields.io/badge/Plugin-WorldGuard-%230059c9?style=flat-square)](https://enginehub.org/worldguard) ![GitHub commits since latest release](https://img.shields.io/github/commits-since/CraftLight-Network/WorldGuard-EndermanTeleport/latest?label=commits%20since%20release&style=flat-square)  
 
-[![Support Discord](https://img.shields.io/discord/707330384328654869?color=7289DA&label=Support&style=flat-square)](https://discord.gg/rjSkFyj) [![CraftLight Network Discord](https://img.shields.io/discord/525487377817534484?color=7289DA&label=CraftLight%20Network&style=flat-square)](https://discord.gg/ba7WPW4)  
+[![Support Discord](https://img.shields.io/discord/646517284453613578?color=7289DA&label=Support&style=flat-square)](https://discord.gg/7NQtvXm) [![CraftLight Network Discord](https://img.shields.io/discord/525487377817534484?color=7289DA&label=CraftLight%20Network&style=flat-square)](https://discord.gg/ba7WPW4)  
 
 [![Codacy branch grade](https://img.shields.io/codacy/grade/649269408303456b9efc7840fbf0fc06/main?style=flat-square)](https://app.codacy.com/gh/CraftLight-Network/WorldGuard-EndermanTeleport) [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/CraftLight-Network/WorldGuard-EndermanTeleport?style=flat-square)](https://codeclimate.com/github/CraftLight-Network/WorldGuard-EndermanTeleport)
 </td>
