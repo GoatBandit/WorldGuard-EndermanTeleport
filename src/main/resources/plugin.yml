@@ -1,0 +1,10 @@
+main: dev.encode42.wgetp.WGETp
+api-version: 1.15
+name: WorldGuard-EndermanTeleport
+description: Adds an "enderman-teleport" flag to WorldGuard.
+version: ${project.version}
+authors: [ Encode42 ]
+website: https://encode42.dev/WG-ETp
+prefix: WG-ETp
+load: STARTUP
+depend: [ WorldGuard ]
