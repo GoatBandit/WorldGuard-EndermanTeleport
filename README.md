@@ -13,7 +13,7 @@
 #### Features
 - Uses WorldGuard's flag API.
 - Lightweight, minimal checks.
-- Small file size. (~3kb)
+- Small file size. (~2kb)
 </td>
 <td>
 
