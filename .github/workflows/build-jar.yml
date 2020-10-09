@@ -41,5 +41,5 @@ jobs:
       - name: Upload GitHub artifact
         uses: actions/upload-artifact@v2
         with:
-          name: "$OUTPUT_NAME"
-          path: "target/${OUTPUT_NAME}.jar"
+          name: ${{ env.OUTPUT_NAME }}
+          path: target/${{ env.OUTPUT_NAME }}.jar
