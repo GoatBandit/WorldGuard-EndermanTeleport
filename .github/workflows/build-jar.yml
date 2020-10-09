@@ -33,4 +33,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ env.GITHUB_WORKFLOW }}
-          path: ${{ env.JAR }}
+          path: ${{ env.JAR }}.jar
