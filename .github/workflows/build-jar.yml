@@ -24,10 +24,10 @@ jobs:
 
       - name: Rename output .jar
         run: |
-            NAME=$(mvn -q -Dexec.executable="echo" -Dexec.args='${project.build.finalName}' exec:exec)
-            JAR=${NAME}_${GITHUB_RUN_NUMBER}
-            mv target/${NAME}.jar ${JAR}.jar
-            echo $JAR >> $GITHUB_ENV
+            NAME="$(mvn -q -Dexec.executable="echo" -Dexec.args='${project.build.finalName}' exec:exec)"
+            JAR="${NAME}_${GITHUB_RUN_NUMBER}"
+            mv "target/${NAME}.jar" "${JAR}.jar"
+            echo "$JAR" >> $GITHUB_ENV
 
       - name: Upload GitHub artifact
         uses: actions/upload-artifact@v2
