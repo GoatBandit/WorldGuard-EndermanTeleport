@@ -1,19 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project>
 	<modelVersion>4.0.0</modelVersion>
 
 	<name>WorldGuard-EndermanTeleport</name>
 	<description>Adds an "enderman-teleport" flag to WorldGuard.</description>
 	<version>1.0-SNAPSHOT</version>
-	<url>https://encode42.dev/WG-ETp</url>
-
-	<licenses>
-		<license>
-			<name>GNU General Public License, Version 3.0</name>
-			<url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
 
 	<groupId>dev.encode42</groupId>
 	<artifactId>wg-etp</artifactId>
@@ -35,22 +25,6 @@
 					<source>${java.version}</source>
 					<target>${java.version}</target>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>3.2.4</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-						<configuration>
-							<createDependencyReducedPom>false</createDependencyReducedPom>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 		<resources>
