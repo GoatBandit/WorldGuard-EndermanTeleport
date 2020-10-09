@@ -22,23 +22,11 @@ jobs:
       - name: Build with Maven
         run: mvn clean package
 
-      - name: Get build number
-        uses: einaregilsson/build-number@v2
-        with:
-          token: ${{ secrets.github_token }}
-
-      - name: Set project name
-        run: |
-            NAME=$( mvn help:evaluate -Dexpression=project.name -q -DforceStdout )
-            echo "PROJECT_NAME=${NAME}" >> $GITHUB_ENV
-      - name: Set output name
-        run: echo "OUTPUT_NAME=${PROJECT_NAME}_${BUILD_NUMBER}" >> $GITHUB_ENV
-
       - name: Rename output .jar
-        run: mv target/artifact.jar "target/${OUTPUT_NAME}.jar"
+        run: for f in *.jar; do mv -v "$f" "${f%.*}_${GITHUB_RUN_NUMBER}.${f##*.}"; done
 
       - name: Upload GitHub artifact
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ env.OUTPUT_NAME }}
-          path: target/${{ env.OUTPUT_NAME }}.jar
+          name: ${{ env.GITHUB_WORKFLOW }}
+          path: target/*.jar

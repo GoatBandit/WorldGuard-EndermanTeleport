@@ -15,7 +15,7 @@
 	</properties>
 
 	<build>
-		<finalName>artifact</finalName>
+		<finalName>WG-ETp</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
